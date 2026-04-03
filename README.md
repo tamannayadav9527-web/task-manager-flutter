@@ -117,6 +117,4 @@ It demonstrates core Flutter development skills including UI design, state manag
 
 ## Improvements
 - UI enhancements added
-- UI enhancements added
-- UI enhancements added
----vvvvvvvvvv
+---
