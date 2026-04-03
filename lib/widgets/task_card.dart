@@ -4,6 +4,7 @@ import 'package:task_manager_app/screens/add_edit_task_screen.dart';
 import '../models/task.dart';
 import '../providers/task_provider.dart';
 
+// Improved task UI logic
 class TaskCard extends StatelessWidget {
   final Task task;
   final bool isBlocked;
