@@ -19,8 +19,8 @@ A clean and functional Task Manager App built using Flutter. This app allows use
 
 # Demo Video
 
-👉 Watch the demo here:
-https://drive.google.com/your-video-link
+👉 Watch the demo here:https://1drv.ms/v/c/b971c9ea61b9176c/IQBT0cNY8qSVTJA184C4FfmUAYbrmbS-e4cDFWMgdi1ZJKk?e=lBvtaJ
+
 
 ---
 
@@ -47,7 +47,7 @@ lib/
 
 1. Clone the repository:
 
-git clone https://github.com/your-username/task-manager-app.git
+git clone https://github.com/tamannayadav9527-web/task-manager-flutter.git
 
 2. Navigate to project folder:
 
