@@ -34,7 +34,7 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         children: [
 
-          /// 🔍 SEARCH BAR
+          /// SEARCH BAR
           Padding(
             padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
             child: TextField(
@@ -55,7 +55,7 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
 
-          /// 🎯 FILTER DROPDOWN
+          /// FILTER DROPDOWN
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Container(
@@ -82,7 +82,7 @@ class HomeScreen extends StatelessWidget {
                   }),
                 ],
                 onChanged: (value) {
-                  provider.setFilter(value); // ✅ FIXED (no direct notifyListeners)
+                  provider.setFilter(value); // FIXED (no direct notifyListeners)
                 },
               ),
             ),
@@ -90,7 +90,7 @@ class HomeScreen extends StatelessWidget {
 
           const SizedBox(height: 10),
 
-          /// 📋 TASK LIST / EMPTY STATE
+          /// TASK LIST / EMPTY STATE
           Expanded(
             child: filteredTasks.isEmpty
                 ? const EmptyState()
@@ -115,7 +115,7 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
 
-      /// ➕ ADD TASK BUTTON
+      /// ADD TASK BUTTON
       floatingActionButton: FloatingActionButton(
         elevation: 2,
         child: const Icon(Icons.add),
@@ -144,7 +144,7 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-/// 🌟 EMPTY STATE WIDGET
+/// EMPTY STATE WIDGET
 class EmptyState extends StatelessWidget {
   const EmptyState({super.key});
 
