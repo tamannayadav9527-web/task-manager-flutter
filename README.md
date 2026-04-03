@@ -115,4 +115,6 @@ Tamanna Yadav
 This project was built as part of an assignment submission.
 It demonstrates core Flutter development skills including UI design, state management, and local data persistence.
 
+## Improvements
+- UI enhancements added
 ---
