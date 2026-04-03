@@ -20,7 +20,7 @@ class _AddEditTaskScreenState extends State<AddEditTaskScreen> {
   Status selectedStatus = Status.todo;
   String? selectedBlockedTaskId;
 
-  /// ✅ NEW: Recurring
+  ///  NEW: Recurring
   RecurringType selectedRecurring = RecurringType.none;
 
   String? get currentTaskId => widget.task?.id;
@@ -37,7 +37,7 @@ class _AddEditTaskScreenState extends State<AddEditTaskScreen> {
     }
   }
 
-  /// ✅ NEW: RECURRING TEXT
+  /// NEW: RECURRING TEXT
   String recurringToString(RecurringType type) {
     switch (type) {
       case RecurringType.none:
@@ -63,7 +63,7 @@ class _AddEditTaskScreenState extends State<AddEditTaskScreen> {
       selectedStatus = t.status;
       selectedBlockedTaskId = t.blockedByTaskId;
 
-      /// ✅ LOAD RECURRING WHEN EDITING
+      /// LOAD RECURRING WHEN EDITING
       selectedRecurring = t.recurringType;
     } else {
       titleController.text = provider.draftTitle;
@@ -206,7 +206,7 @@ class _AddEditTaskScreenState extends State<AddEditTaskScreen> {
 
               const SizedBox(height: 15),
 
-              /// ✅ NEW: RECURRING DROPDOWN
+              /// NEW: RECURRING DROPDOWN
               DropdownButton<RecurringType>(
                 value: selectedRecurring,
                 isExpanded: true,
@@ -293,7 +293,7 @@ class _AddEditTaskScreenState extends State<AddEditTaskScreen> {
                             blockedByTaskId:
                                 selectedBlockedTaskId,
 
-                            /// ✅ PASS RECURRING
+                            /// PASS RECURRING
                             recurringType: selectedRecurring,
                           );
 
