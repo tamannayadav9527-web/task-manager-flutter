@@ -1,6 +1,6 @@
 enum Status { todo, inProgress, done }
 
-/// 🔁 ENUM FOR RECURRING
+///  ENUM FOR RECURRING
 enum RecurringType { none, daily, weekly }
 
 class Task {
@@ -11,7 +11,7 @@ class Task {
   Status status;
   String? blockedByTaskId;
 
-  /// 🔁 RECURRING FIELD
+  ///  RECURRING FIELD
   RecurringType recurringType;
 
   Task({
@@ -24,7 +24,7 @@ class Task {
     this.recurringType = RecurringType.none,
   });
 
-  /// 📦 TASK → JSON (SAVE)
+  ///  TASK → JSON (SAVE)
   Map<String, dynamic> toJson() {
     return {
       'id': id,
@@ -37,7 +37,7 @@ class Task {
     };
   }
 
-  /// 📥 JSON → TASK (LOAD)
+  ///  JSON → TASK (LOAD)
   factory Task.fromJson(Map<String, dynamic> json) {
     return Task(
       id: json['id'] ?? '',
@@ -45,7 +45,7 @@ class Task {
       description: json['description'] ?? '',
       dueDate: DateTime.tryParse(json['dueDate'] ?? '') ?? DateTime.now(),
 
-      /// ✅ SAFE STATUS PARSING
+      ///  SAFE STATUS PARSING
       status: (json['status'] != null &&
               json['status'] < Status.values.length)
           ? Status.values[json['status']]
@@ -53,7 +53,7 @@ class Task {
 
       blockedByTaskId: json['blockedByTaskId'],
 
-      /// ✅ SAFE RECURRING PARSING
+      /// SAFE RECURRING PARSING
       recurringType: (json['recurringType'] != null &&
               json['recurringType'] < RecurringType.values.length)
           ? RecurringType.values[json['recurringType']]
@@ -61,7 +61,7 @@ class Task {
     );
   }
 
-  /// 🔄 COPY WITH (VERY IMPORTANT FOR CLEAN CODE)
+  ///  COPY WITH (VERY IMPORTANT FOR CLEAN CODE)
   Task copyWith({
     String? id,
     String? title,
