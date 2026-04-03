@@ -14,7 +14,7 @@ class TaskCard extends StatelessWidget {
     required this.isBlocked,
   });
 
-  /// 🟢🔵 STATUS LABEL
+  ///  STATUS LABEL
   Widget buildStatusLabel(bool isDone) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
@@ -33,7 +33,7 @@ class TaskCard extends StatelessWidget {
     );
   }
 
-  /// 🔍 HIGHLIGHT FUNCTION (UNCHANGED)
+  /// HIGHLIGHT FUNCTION (UNCHANGED)
   Widget buildHighlightedText(
       String text, String query, bool isDone, bool isBlocked) {
     if (query.isEmpty) {
@@ -114,7 +114,7 @@ class TaskCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
 
-            /// ✅ CHECKBOX
+            /// CHECKBOX
             Checkbox(
               value: isDone,
               onChanged: isBlocked
@@ -127,7 +127,7 @@ class TaskCard extends StatelessWidget {
                     },
             ),
 
-            /// ✅ CONTENT
+            /// CONTENT
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -155,7 +155,7 @@ class TaskCard extends StatelessWidget {
 
                   const SizedBox(height: 4),
 
-                  /// 📅 DATE
+                  /// DATE
                   Text(
                     "${task.dueDate.day}-${task.dueDate.month}-${task.dueDate.year}",
                     style: const TextStyle(
@@ -166,13 +166,13 @@ class TaskCard extends StatelessWidget {
 
                   const SizedBox(height: 6),
 
-                  /// 🟢🔵 STATUS BADGE
+                  /// STATUS BADGE
                   buildStatusLabel(isDone),
                 ],
               ),
             ),
 
-            /// ✏️ EDIT + 🗑 DELETE
+            ///  EDIT + DELETE
             Column(
               children: [
                 IconButton(
