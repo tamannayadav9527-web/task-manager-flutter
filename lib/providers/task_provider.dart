@@ -18,7 +18,7 @@ class TaskProvider extends ChangeNotifier {
   String draftDescription = '';
   DateTime? draftDate;
 
-  /// 🔍 DEBOUNCED SEARCH
+  ///  DEBOUNCED SEARCH
   void onSearchChanged(String query) {
     if (_debounce?.isActive ?? false) _debounce!.cancel();
 
@@ -133,7 +133,7 @@ class TaskProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  /// ✅ UPDATED TASK WITH RECURRING LOGIC
+  /// UPDATED TASK WITH RECURRING LOGIC
   Future<void> updateTask(Task updatedTask) async {
     isLoading = true;
     notifyListeners();
@@ -146,7 +146,7 @@ class TaskProvider extends ChangeNotifier {
       _tasks[index] = updatedTask;
     }
 
-    /// 🔥 RECURRING LOGIC
+    /// RECURRING LOGIC
     if (updatedTask.status == Status.done &&
         updatedTask.recurringType != RecurringType.none) {
 
@@ -171,7 +171,7 @@ class TaskProvider extends ChangeNotifier {
       _tasks.add(newTask);
     }
 
-    /// ✅ SAVE AFTER EVERYTHING
+    /// SAVE AFTER EVERYTHING
     await saveTasks();
 
     isLoading = false;
